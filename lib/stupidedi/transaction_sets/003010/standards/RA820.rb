@@ -16,7 +16,9 @@ module Stupidedi
             s::DTM.use( 60, r::Mandatory,  d::RepeatCount.bounded(1)),
 
             d::LoopDef.build("N1", d::RepeatCount.bounded(1),
-              s:: N1.use(  70, r::Optional, d::RepeatCount.bounded(1)))),
+              s:: N1.use(  70, r::Mandatory, d::RepeatCount.bounded(1)),
+              s:: N1.use(  75, r::Mandatory, d::RepeatCount.bounded(1)),
+              s:: PER.use(  120, r::Optional, d::RepeatCount.bounded(1)))),
 
           d::TableDef.detail("2 - Detail",
             s:: LS.use(  10, r::Mandatory, d::RepeatCount.bounded(1)),

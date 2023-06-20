@@ -457,6 +457,8 @@ module Stupidedi
             "LI" => "Line Item - Nissan Unique Code",
             "MP" => "Manufacturing Plant",
             "PJ" => "Party to Receive Correspondence",
+            "PE" => "Payee",
+            "PR" => "Payer",
             "SH" => "Shipper",
             "SF" => "Ship From",
             "ST" => "Ship To",
@@ -538,6 +540,7 @@ module Stupidedi
             "VP" => "Port Installed Accessory Parts"))
         E128  = t::ID.new(:E128 , "Reference Identification Qualifier"   , 2, 2,
           s::CodeList.build(
+            "AS"  => "a transaction reference number",
             "C4"  => "Change Number",
             "VR"  => "Vendor ID Number",
             "PG"  => "Product Group",
@@ -548,10 +551,16 @@ module Stupidedi
             "PO"  => "Purchase Order Number",
             "SI"  => "Shipper's Identifying Number for Shipment(SID)",
             "IX"  => "Item Number",
+            "IT"  => "Internal Customer number",
             "QI"  => "Quality Inspection Ara Identifier",
             "RE"  => "Release Number",
+            "RR"  => "Inter FI trace number",
             "PM"  => "Part Number",
-            "UM"  => "Supplier Unit of Measurement - Nissan Unique Code"))
+            "TN"  => "Transmitter's Trace Number or the Prepare/Registrant's Trace Number for GST/HST",
+            "UM"  => "Supplier Unit of Measurement - Nissan Unique Code",
+            "T2"  => "Tax Form Code",
+            "TJ" => "Federal Taxpayer's Identification Number",
+            "ZZ"  => "a mutually defined transaction reference number"))
         E133  = t::ID.new(:E133 , "Routing Sequence Code"                , 1, 2,
           s::CodeList.build(
             "B" => "Origin/Delivery Carrier (Any Mode)"))
@@ -4151,7 +4160,8 @@ module Stupidedi
             "DC" => "Delivery Contact",
             "IC" => "Information Contact",
             "SH" => "Shipper Contact",
-            "HM" => "Hazardous Material Contact"))
+            "HM" => "Hazardous Material Contact",
+            "ZZ" => "Mutually Defined"))
         E367  = t::AN.new(:E367, "Contract Number"                       , 1, 30)
         E368  = t::AN.new(:E368, "Shipment/Order Status Code"            , 2, 2,
           s::CodeList.build(
@@ -4171,6 +4181,8 @@ module Stupidedi
             "036" => "Expiration",
             "037" => "Ship not before",
             "038" => "Ship no later",
+            "091" => "Report End Date",
+            "097" => "Transaction Creation",
             "175" => "Cancel if not shipped by",
             "193" => "Receipt - Nissan Unique Code",
             "195" => "Payment - Nissan Unique Code"))
@@ -8974,22 +8986,22 @@ module Stupidedi
         E1271 = t::AN.new(:E1271, "Industry Code"                        , 1, 30)
         E1280 = t::ID.new(:E1280, "Direction Identifier Code"            , 1, 1,
           s::CodeList.build(
-            "A" => "Northeast",
-            "B" => "Northwest",
-            "C" => "Southeast",
-            "D" => "Southwest",
-            "E" => "East",
-            "F" => "North Northwest",
-            "G" => "South Southeast",
-            "H" => "South Southwest",
-            "I" => "North Northeast",
-            "J" => "East Northeast",
-            "K" => "East Southeast",
-            "L" => "West Northwest",
-            "M" => "West Southwest",
-            "N" => "North",
-            "S" => "South",
-            "W" => "West"))
+            "A"  => "Northeast",
+            "B"  => "Northwest",
+            "C"  => "Southeast",
+            "D"  => "Southwest",
+            "E"  => "East",
+            "F"  => "North Northwest",
+            "G"  => "South Southeast",
+            "H"  => "South Southwest",
+            "I"  => "North Northeast",
+            "J"  => "East Northeast",
+            "K"  => "East Southeast",
+            "L"  => "West Northwest",
+            "M"  => "West Southwest",
+            "N"  => "North",
+            "S"  => "South",
+            "W"  => "West"))
         E1373 = t::ID.new(:E1373, "Measurement Method or  Device Code"   , 2, 4,
           s::CodeList.build(
             "BM" => "Bellows Meter",
