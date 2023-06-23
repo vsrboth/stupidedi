@@ -5965,13 +5965,73 @@ module Stupidedi
             "17" => "Incorrect Message Length (Encryption Only)",
             "18" => "Message Authentication Code Failed",
             "19" => "Functional Group Control Number not Unique within Interchange",
+            "20" => "S1S Security Start Segment Missing for S1E Security End Segment",
+            "21" => "S2E Security End Segment Missing for S2S Security Start Segment",
+            "22" => "S2S Security Start Segment Missing for S2E Security End Segment",
             "23" => "S3E Security End Segment Missing for S3S Security Start Segment",
             "24" => "S3S Security Start Segment Missing for S3E Security End Segment",
             "25" => "S4E Security End Segment Missing for S4S Security Start Segment",
             "26" => "S4S Security Start Segment Missing for S4E Security End Segment"))
+        E717  = t::ID.new(:E717 , "Transaction Set Acknowledgment Code"  , 1, 1,
+          s::CodeList.build(
+            "A" => "Accepted",
+            "E" => "Accepted But Errors Were Noted",
+            "M" => "Rejected, Message Authentication Code (MAC) Failed",
+            "R" => "Rejected",
+            "X" => "Rejected, Content After Decryption Could Not Be Analyzed"))
+        E718  = t::ID.new(:E718 , "Transaction Set Syntax Error Code", 1, 3,
+          s::CodeList.build(
+            "1"  => "Transaction Set Not Supported",
+            "2"  => "Transaction Set Trailer Missing",
+            "3"  => "Transaction Set Control Number in Header and Trailer Do Not Match",
+            "4"  => "Number of Included Segments Does Not Match Actual Count",
+            "5"  => "One or More Segments in Error",
+            "6"  => "Missing or Invalid Transaction Set Identifier",
+            "7"  => "Missing or Invalid Transaction Set Control Number",
+            "8"  => "Authentication Key Name Unknown",
+            "9"  => "Encryption Key Name Unknown",
+            "10" => "Requested Service (Authentication or Encrypted) Not Available",
+            "11" => "Unknown Security Recipient",
+            "12" => "Incorrect Message Length (Encryption Only)",
+            "13" => "Message Authentication Code Failed",
+            "15" => "Unknown Security Originator",
+            "16" => "Syntax Error In Decrypted Text",
+            "17" => "Security Not Supported",
+            "19" => "S1E Security End Segment Missing for S1S Security Start Segment",
+            "20" => "S1S Security Start Segment Missing for S1E Security End Segment",
+            "21" => "S2E Security End Segment Missing for S2S Security Start Segment",
+            "22" => "S2S Security Start Segment Missing for S2E Security End Segment",
+            "23" => "Transaction Set Control Number Not Unique within the Functional Group"
+          ))
         E719  = t::Nn.new(:E719 , "Segment Position in Transaction Set"  , 1, 10, 0)
+        E720  = t::ID.new(:E720 ,  "Segment Syntax Error Code"           , 1, 3,
+          s::CodeList::build(
+            "1" => "Unrecognized segment ID",
+            "2" => "Unexpected segment",
+            "3" => "Mandatory segment missing",
+            "4" => "Loop occurs Over Maximum Times",
+            "5" => "Segment Exceeds Maximum Use",
+            "6" => "Segment Not in Defined Transaction Set",
+            "7" => "Segment Not in Proper Sequence"
+          ))
         E721  = t::ID.new(:E721 , "Segment ID Code"                      , 2, 3,
           s::CodeList.external("77"))
+        E722  = t::Nn.new(:E722 , "Element Position in Segment"          , 1, 2, 0)
+        E723  = t::ID.new(:E723 , "Data Element Syntax Error Code"       , 1, 3,
+          s::CodeList::build(
+            "1"  => "Mandatory data element missing",
+            "2"  => "Conditional required data element missing",
+            "3"  => "Too many data elements",
+            "4"  => "Data element too short",
+            "5"  => "Data element too long",
+            "6"  => "Invalid character in data element",
+            "7"  => "Invalid code value",
+            "8"  => "Invalid date",
+            "9"  => "Invalid Time",
+            "10" => "Exclusion Condition Violated"
+          ))
+        E724  = t::AN.new(:E724 , "Copy of Bad Data Element"             , 1, 99)
+        E725  = t::Nn.new(:E725 , "Data Element Reference Number"        , 1, 4, 0)
         E728  = t::ID.new(:E728 , "Returnable Container Load Make-Up Code" , 1, 2)
         E729  = t::DT.new(:E729 , "Category - Ship Notice Date"          , 6, 6)
         E730  = t::TM.new(:E730 , "Subcategory - Ship Notice Time"       , 4, 4)
