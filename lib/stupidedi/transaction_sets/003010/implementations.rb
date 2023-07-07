@@ -15,6 +15,7 @@ module Stupidedi
         end
 
         autoload :RA820, "stupidedi/transaction_sets/003010/implementations/RA820"
+        autoload :FA997, "stupidedi/transaction_sets/003010/implementations/FA997"
         #utoload :PO850, "stupidedi/transaction_sets/003010/implementations/PO850"
         #utoload :PC860, "stupidedi/transaction_sets/003010/implementations/PC860"
         #utoload :PS830, "stupidedi/transaction_sets/003010/implementations/PS830"

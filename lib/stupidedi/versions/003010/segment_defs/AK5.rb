@@ -11,7 +11,7 @@ module Stupidedi
           "To acknowledge acceptance or rejection and to report errors in a Transaction Set.",
           e::E717 .simple_use(r::Mandatory,  s::RepeatCount.bounded(1)),
           e::E718 .simple_use(r::Optional,   s::RepeatCount.bounded(1)),
-          e::E718 .simple_use(r::Mandatory,  s::RepeatCount.bounded(1)),
+          e::E718 .simple_use(r::Optional,  s::RepeatCount.bounded(1)),
           e::E718 .simple_use(r::Optional,   s::RepeatCount.bounded(1)),
           e::E718 .simple_use(r::Optional,   s::RepeatCount.bounded(1)),
           e::E718 .simple_use(r::Optional,   s::RepeatCount.bounded(1)))

@@ -150,6 +150,7 @@ module Stupidedi
           x.register("003010", "PO", "850") { Stupidedi::TransactionSets::ThirtyTen::Standards::PO850 }
           x.register("003010", "PC", "860") { Stupidedi::TransactionSets::ThirtyTen::Standards::PC860 }
           x.register("003010", "PS", "830") { Stupidedi::TransactionSets::ThirtyTen::Standards::PS830 }
+          x.register("003010", "FA", "997") { Stupidedi::TransactionSets::ThirtyTen::Standards::FA997 }
           x.register("003040", "WA", "142") { Stupidedi::TransactionSets::ThirtyForty::Standards::WA142 }
           x.register("003050", "PO", "850") { Stupidedi::TransactionSets::ThirtyFifty::Standards::PO850 }
           x.register("004010", "PO", "850") { Stupidedi::TransactionSets::FortyTen::Standards::PO850 }

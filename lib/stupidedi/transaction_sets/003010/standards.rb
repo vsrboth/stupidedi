@@ -9,6 +9,7 @@ module Stupidedi
         autoload :PO850, "stupidedi/transaction_sets/003010/standards/PO850"
         autoload :PS830, "stupidedi/transaction_sets/003010/standards/PS830"
         autoload :RA820, "stupidedi/transaction_sets/003010/standards/RA820"
+        autoload :FA997, "stupidedi/transaction_sets/003010/standards/FA997"
       end
     end
   end

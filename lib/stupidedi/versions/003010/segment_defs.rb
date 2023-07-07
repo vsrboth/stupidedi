@@ -6,6 +6,8 @@ module Stupidedi
         autoload :AK1, "stupidedi/versions/003010/segment_defs/AK1"
         autoload :AK2, "stupidedi/versions/003010/segment_defs/AK2"
         autoload :AK3, "stupidedi/versions/003010/segment_defs/AK3"
+        autoload :AK4, "stupidedi/versions/003010/segment_defs/AK4"
+        autoload :AK5, "stupidedi/versions/003010/segment_defs/AK5"
         autoload :AK9, "stupidedi/versions/003010/segment_defs/AK9"
         autoload :AT7, "stupidedi/versions/003010/segment_defs/AT7"
         autoload :AT8, "stupidedi/versions/003010/segment_defs/AT8"
